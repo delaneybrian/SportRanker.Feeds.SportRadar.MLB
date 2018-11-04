@@ -24,7 +24,7 @@ namespace SportRanker.Feeds.SportRadar.MLB.Infrastructure
 
             var apiKey = "juf6evz79agmrbw8w4a9vqbm";
 
-            var yesterday = DateTime.UtcNow.AddDays(-89);
+            var yesterday = DateTime.UtcNow.AddDays(-1);
 
             var url = $"https://api.sportradar.us/mlb-t6/games/{yesterday.Year}/{yesterday.Month}/{yesterday.Day}/summary.json?api_key={apiKey}";
 
