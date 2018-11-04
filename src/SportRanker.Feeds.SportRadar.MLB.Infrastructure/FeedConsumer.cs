@@ -45,6 +45,9 @@ namespace SportRanker.Feeds.SportRadar.MLB.Infrastructure
                     Formatting = Formatting.Indented
                 });
 
+                if (feedSchedule.league.games == null)
+                    return feedFixtures;
+
                 foreach (var game in feedSchedule.league.games)
                 {
                     var fixture = game.game;
