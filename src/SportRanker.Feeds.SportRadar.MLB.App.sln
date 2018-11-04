@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportRanker.Feeds.SportRadar.MLB.App", "SportRanker.Feeds.SportRadar.MLB.App\SportRanker.Feeds.SportRadar.MLB.App.csproj", "{57CC2597-0C65-433D-8001-5F7FEC96BC78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportRanker.Feeds.SportRadar.MLB.Application", "SportRanker.Feeds.SportRadar.MLB.Application\SportRanker.Feeds.SportRadar.MLB.Application.csproj", "{D57873B1-3EFD-47CA-ACF0-9FB0E88071DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportRanker.Feeds.SportRadar.MLB.Contracts", "SportRanker.Feeds.SportRadar.MLB.Contracts\SportRanker.Feeds.SportRadar.MLB.Contracts.csproj", "{55D1C74B-5428-48E6-91A3-0DAAC0B1A3B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportRanker.Feeds.SportRadar.MLB.Definitions", "SportRanker.Feeds.SportRadar.MLB.Definitions\SportRanker.Feeds.SportRadar.MLB.Definitions.csproj", "{D0BD56A1-A427-4ECE-9D7F-BB99C2E10015}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportRanker.Feeds.SportRadar.MLB.Infrastructure", "SportRanker.Feeds.SportRadar.MLB.Infrastructure\SportRanker.Feeds.SportRadar.MLB.Infrastructure.csproj", "{E8B32B87-9A1A-4D43-A345-262CDA6EEBCA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SportRanker.Feeds.SportRadar.MLB.Interfaces", "SportRanker.Feeds.SportRadar.MLB.Interfaces\SportRanker.Feeds.SportRadar.MLB.Interfaces.csproj", "{944A352B-52CD-4A02-BA06-974BB8A62A54}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57CC2597-0C65-433D-8001-5F7FEC96BC78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57CC2597-0C65-433D-8001-5F7FEC96BC78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57CC2597-0C65-433D-8001-5F7FEC96BC78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57CC2597-0C65-433D-8001-5F7FEC96BC78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D57873B1-3EFD-47CA-ACF0-9FB0E88071DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D57873B1-3EFD-47CA-ACF0-9FB0E88071DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D57873B1-3EFD-47CA-ACF0-9FB0E88071DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D57873B1-3EFD-47CA-ACF0-9FB0E88071DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55D1C74B-5428-48E6-91A3-0DAAC0B1A3B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55D1C74B-5428-48E6-91A3-0DAAC0B1A3B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55D1C74B-5428-48E6-91A3-0DAAC0B1A3B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55D1C74B-5428-48E6-91A3-0DAAC0B1A3B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0BD56A1-A427-4ECE-9D7F-BB99C2E10015}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0BD56A1-A427-4ECE-9D7F-BB99C2E10015}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0BD56A1-A427-4ECE-9D7F-BB99C2E10015}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0BD56A1-A427-4ECE-9D7F-BB99C2E10015}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8B32B87-9A1A-4D43-A345-262CDA6EEBCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8B32B87-9A1A-4D43-A345-262CDA6EEBCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8B32B87-9A1A-4D43-A345-262CDA6EEBCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8B32B87-9A1A-4D43-A345-262CDA6EEBCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{944A352B-52CD-4A02-BA06-974BB8A62A54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{944A352B-52CD-4A02-BA06-974BB8A62A54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{944A352B-52CD-4A02-BA06-974BB8A62A54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{944A352B-52CD-4A02-BA06-974BB8A62A54}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7A0B10BD-B401-429B-983F-BFA05FD05CB8}
+	EndGlobalSection
+EndGlobal

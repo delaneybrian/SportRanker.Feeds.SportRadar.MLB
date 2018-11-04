@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.8.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SportRanker.Feeds.SportRadar.MLB.Application\SportRanker.Feeds.SportRadar.MLB.Application.csproj" />
+    <ProjectReference Include="..\SportRanker.Feeds.SportRadar.MLB.Infrastructure\SportRanker.Feeds.SportRadar.MLB.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
