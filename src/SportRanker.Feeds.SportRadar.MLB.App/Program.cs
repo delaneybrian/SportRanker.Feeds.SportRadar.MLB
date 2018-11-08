@@ -14,7 +14,7 @@ namespace SportRanker.Feeds.SportRadar.MLB.App
             var feedProcessor = container.Resolve<IFeedProcessor>();
 
             Task.Run(() => feedProcessor.StartProcessing());
-
+                
             Console.ReadKey();
         }
     }
