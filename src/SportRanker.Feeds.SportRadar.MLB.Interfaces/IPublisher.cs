@@ -1,4 +1,4 @@
-﻿using SportRanker.Feeds.SportRadar.MLB.Contracts;
+﻿using SportRanker.Contracts.SystemEvents;
 
 namespace SportRanker.Feeds.SportRadar.MLB.Interfaces
 {

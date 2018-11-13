@@ -23,6 +23,14 @@ namespace SportRanker.Feeds.SportRadar.MLB.App
                 .RegisterType<Publisher>()
                 .As<IPublisher>();
 
+            builder
+                .RegisterType<FixtureResultDeriver>()
+                .As<IFixtureResultDeriver>();
+
+            builder
+                .RegisterType<DataProvider>()
+                .As<IDataProvider>();
+
             return builder.Build();
         }
     }

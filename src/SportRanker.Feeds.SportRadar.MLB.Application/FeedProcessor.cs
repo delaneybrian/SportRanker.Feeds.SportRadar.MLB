@@ -1,49 +1,35 @@
-﻿using SportRanker.Feeds.SportRadar.MLB.Interfaces;
-using System;
+﻿using SportRanker.Feeds.SportRadar.MLB.Application.Extensions;
+using SportRanker.Feeds.SportRadar.MLB.Interfaces;
 using System.Threading.Tasks;
-using Timer = System.Timers.Timer;
 
 namespace SportRanker.Feeds.SportRadar.MLB.Application
 {
     public class FeedProcessor : IFeedProcessor
     {
-        public readonly IFeedConsumer _feedConsumer;
-        public readonly IPublisher _publisher;
-
-        private Timer _feedRetrivalTimer;
-        private int OneDayInterval = 1000 * 60 * 60 * 24;
+        private readonly IFeedConsumer _feedConsumer;
+        private readonly IPublisher _publisher;
+        private readonly IFixtureResultDeriver _fixtureResultDeriver;
 
         public FeedProcessor(IFeedConsumer feedConsumer,
-            IPublisher publisher)
+            IPublisher publisher,
+            IFixtureResultDeriver fixtureResultDeriver)
         {
             _feedConsumer = feedConsumer;
             _publisher = publisher;
-
-            _feedRetrivalTimer = new Timer();
-            _feedRetrivalTimer.Elapsed += OnTimerElapsed;
-            _feedRetrivalTimer.Interval = OneDayInterval;
+            _fixtureResultDeriver = fixtureResultDeriver;
         }
 
         public async Task StartProcessing()
         {
-            _feedRetrivalTimer.Start();
-            OnTimerElapsed(this, null);
-        }
+            var feedResults = await _feedConsumer.GetFixtureResultsForYesterdayAsync();
 
-        public void OnTimerElapsed(object sender, EventArgs e)
-        {
-            Task.Run(async () =>
+            foreach (var feedResult in feedResults)
             {
-                var feedResults = await _feedConsumer.GetFixtureResultsForYesterdayAsync();
+                var fixtureResultMaybe = await _fixtureResultDeriver.TryGenerateFixtureResult(feedResult);
 
-                foreach (var feedResult in feedResults)
-                {
-                    var fixtureResult = ResultConverter.ConvertFromFeedFixtureResult(feedResult);
-
+                if (fixtureResultMaybe.TrySome(out var fixtureResult))
                     _publisher.PublishFixtureResult(fixtureResult);
-                }
-
-            });
+            }
         }
     }
 }

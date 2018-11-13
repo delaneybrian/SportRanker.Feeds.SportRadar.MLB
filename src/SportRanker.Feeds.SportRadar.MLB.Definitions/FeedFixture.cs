@@ -1,9 +1,12 @@
-﻿using System;
+﻿using SportRanker.Contracts.Dto;
+using System;
 
 namespace SportRanker.Feeds.SportRadar.MLB.Definitions
 {
     public class FeedFixture
     {
+        public string ProviderFixtureId { get; set; }
+        public SourceId FeedSource { get; set; }
         public DateTime KickOffTimeUtc { get; set; }
         public string HomeTeamId { get; set; }
         public string AwayTeamId { get; set; }
