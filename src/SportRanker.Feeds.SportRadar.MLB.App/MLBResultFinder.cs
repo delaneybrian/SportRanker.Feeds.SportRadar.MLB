@@ -9,7 +9,7 @@ namespace SportRanker.Feeds.SportRadar.MLB.App
     public static class MLBResultFinder
     {
         [FunctionName("MLBResultFinder")]
-        public static void Run([TimerTrigger("0 0 20 * * *")]TimerInfo myTimer, TraceWriter log)
+        public static void Run([TimerTrigger("0 0 11 * * *")]TimerInfo myTimer, TraceWriter log)
         {
             log.Info($"C#" +
                 $" Timer trigger function executed at: {DateTime.Now}");
